@@ -1,0 +1,605 @@
+@import "../../node_modules/normalize.css/normalize";
+@import "../../node_modules/slick-carousel/slick/slick";
+@import "../../node_modules/magnific-popup/dist/magnific-popup";
+ 
+$color:  #fb6470;
+
+* {
+	font-family: 'Raleway', sans-serif;
+	box-sizing: border-box;
+	font-size: 18pt;
+}
+
+.header {
+	width: 100%;
+	min-height: 580px;
+	position: relative;
+	background-color: #353541;
+
+	.menu {
+		position: absolute;
+		color: $color;
+		margin: 45px 0 0 80px;
+		top: 0;
+		cursor: pointer;
+		left: 0;
+		.fa-bars:before {
+			font-size: 40px;
+		}
+	}
+	.slick-slider {
+		.img {
+			position: relative;
+		}
+		.img .slider-info {
+			text-align: center;
+			min-width: 330px;
+			height: 200px;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-52%);
+			top:200px;
+			color: #fff;
+			.info-name {
+				font-size: 48pt;
+			}
+		} 
+	}
+}
+
+.hireMe {
+	width: 170px;
+	height: 50px;
+	background-color: #fb6470;
+	border: none;
+	border-radius: 8px; 	
+	font-family: 'Raleway', sans-serif;
+	color: #fff;
+	cursor: pointer;
+}
+
+.slick-slider {
+	min-height: 580px;
+	.img {
+		width: 100%;
+		min-height: 580px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		overflow: hidden;
+	}
+	.slick-dots {
+		position: absolute;
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr;
+		width: 125px;
+		left: 50%;
+		transform: translateX(-50%);;
+		margin: 0;		
+	}
+	.slick-dots li button {
+		display: none;
+	}
+}
+.slider-info {
+	.info-name {
+		border-top: 1px solid #fb6470;
+		border-bottom: 1px solid #fb6470;
+		padding: 20px 50px;
+		margin-bottom: 15px;
+		font-family: 'Raleway', sans-serif;
+	}
+	.info-major {
+		margin-bottom: 45px;
+		font-family: 'Raleway', sans-serif;
+	}
+}
+
+// 2d block
+.aboutMe {
+	min-height: 600px;
+	width: 100%;
+	background-color: #f9f9f9;
+	padding-top: 40px;
+	margin-bottom: 80px;
+}
+
+.container {
+	width: 85%;
+	min-height: 600px;
+	margin: 0 auto;
+
+	.aboutMe_inner {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: .5em;
+		.abouMe-info {
+			grid-column-start: 1;
+			align-self: end;
+			margin: 0;
+		}
+		.aboutMe-photo {
+			grid-column-start: 2;
+			max-width: 380px;
+			max-height: 580px;
+			justify-self: center;
+		}
+	}
+}
+
+.para-info {
+	font-size: 16px;
+	line-height: 1.625;
+	color: rgba(62, 62, 62, 0.8);
+	margin: 0 0 25px;
+
+}
+
+.contact-info {
+	font-size: 18pt;
+}
+
+.about_about{
+	font-size: 32pt;
+	line-height: 22px;
+	margin: 0 0 50px 0;
+	position: relative;
+	&::after{
+		position: absolute;
+		content: '';
+		width: 15%;
+		border-bottom: 2px solid $color;
+		left: 0;
+		bottom: -25px;
+	}
+}
+
+.contact-info-list {
+	list-style: none;
+	font-size: 18px;
+	line-height: 2.778;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	li {
+		width: 340px;
+		height: 50px;
+		background-color: #fff;
+		b {
+			font-weight: bold;
+		}
+	}
+}	
+
+// work Experience
+
+.workExp-header {
+		font-size: 32px;
+		color: rgb(62, 62, 62);
+		font-weight: bold;
+		line-height: 1.563;
+		text-align: left;
+		position: relative;
+		margin-bottom: 75px;
+	&::after {
+		position: absolute;
+		content: '';
+		width: 8%;
+		border-bottom: 2px solid $color;
+		left: 0;
+		bottom: -25px;
+	}
+}
+
+.workExp-jobs {
+	max-width: 480px;
+	min-height: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway";
+	border-radius: 20px;
+	margin: 0;
+	&_position {
+		display: inline;
+		font-size: 17.521px;
+		color: rgb(255, 255, 255);
+		text-align: left;
+		margin-left: 50px;
+		padding-left: 20px;
+	}
+	&_company {
+		display: inline;
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.8);
+		text-align: left;
+		margin-left: 20px;
+		
+	}
+	&_date {
+		font-size: 14.335px;
+		color: $color;
+		text-transform: uppercase;
+		text-align: left;
+		margin: 15px 0px 20px 50px;
+		max-height: 15px;
+		padding-left: 20px;
+	}
+	&_info {
+		font-size: 12.7px;
+		color: rgb(255, 255, 255);
+		line-height: 1.7;
+		text-align: left;
+		margin: 0 0 0 50px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+	}
+}
+
+// Education
+.education {
+	.container {
+		border-top: 1px solid #e5e5e5;	
+	}
+}
+.education-header {
+	font-size: 32px;
+	color: rgb(62, 62, 62);
+	font-weight: bold;
+	line-height: 1.563;
+	text-align: left;
+	position: relative;
+	margin-bottom: 75px;
+	&::after {
+		position: absolute;
+		content: '';
+		width: 8%;
+		border-bottom: 2px solid $color;
+		left: 0;
+		bottom: -25px;
+	}
+}
+
+.education-jobs {
+	max-width: 480px;
+	min-height: 150px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-family: "Raleway";
+	border-radius: 20px;
+	margin: 0;
+	& .education_position {
+		display: inline;
+		font-size: 17.521px;
+		color: rgb(255, 255, 255);
+		text-align: left;
+		margin-left: 50px;
+		padding-left: 20px;
+	}
+	& .education_company {
+		display: inline;
+		font-size: 16px;
+		color: rgba(255, 255, 255, 0.8);
+		text-align: left;
+		margin-left: 20px;
+		
+	}
+	& .education_date {
+		font-size: 14.335px;
+		color: $color;
+		text-transform: uppercase;
+		text-align: left;
+		margin: 15px 0px 20px 50px;
+		max-height: 15px;
+		padding-left: 20px;
+	}
+	& .education_info {
+		font-size: 12.7px;
+		color: rgb(255, 255, 255);
+		line-height: 1.7;
+		text-align: left;
+		margin: 0 0 0 50px;
+		padding-bottom: 20px;
+		padding-left: 20px;
+	}
+}
+
+// My Skills
+
+.mySkills {
+	width: 100%;
+	min-width: 430px;
+	background-color: #1d1d24;
+	.container {
+		display: grid;
+		grid-template-columns: 270px 270px 270px;
+		grid-column-gap: 190px;
+		grid-template-rows: 165px repeat(4, 65px);
+		grid-auto-columns: 60px;
+		min-height: 430px;
+	}
+}
+
+.mySkills_h3{
+	color: #fff;
+	position: relative;
+	font-size: 32px;
+	font-weight: bold;
+	text-align: left;
+	margin-top: 65px;
+	margin-bottom: 75px;
+	height: 33px;
+	grid-column: 1 / span 3;
+	&::after {
+		position: absolute;
+		content: '';
+		width: 6%;
+		border-bottom: 2px solid $color;
+		left: 0;
+		bottom: -30px;
+	}
+}
+
+.skillNumbers{
+	max-height: 50px;
+	max-width: 320px;
+	position: relative;
+	
+	input[type="range"]{
+		-webkit-appearance: none;
+		width: 270px;
+		height: 5px;
+		background-color: transparent;
+		outline: none;
+		border-radius: 5px;
+		z-index: 3;
+		&::-webkit-slider-thumb{
+			-webkit-appearance: none;
+			appearance: none;
+			width: 20px;
+			height: 20px;
+			border-radius: 50%;
+			background-color: $color;
+			z-index: 99;
+		}
+	}
+	label {
+		color: #fff;
+		font-size: 13pt;
+		line-height:1.7;
+		text-align: left;
+	}
+	.skillsValue {
+		width: 30px;
+		height: 20px;
+		display: inline-block;
+		position: absolute;
+		right: -50px;
+		bottom: -5px;
+	}
+}
+
+// address info
+
+.myAddress .container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: repeat(3, 90px);
+	column-gap: 50px;
+	justify-content: space-evenly;
+	align-content: center;
+	.myAddress-form {
+		grid-column: 1 / 1;
+		grid-row: 1 / span 3;
+		display: grid;
+		grid-template-columns: repeat(6, 100px);
+		grid-template-rows: repeat(auto);
+		grid-template-areas: "para para . . . ." "namee namee namee message message message" "email email email message message message" "subj subj subj message message message" ". . . . . hireme";
+		label[for='message'] {
+			grid-area: para;
+			align-self: start;
+			justify-self: start;
+		}
+		#name {
+			grid-area: namee;
+			justify-self: start;
+			align-self: start;
+		}
+		#email {
+			grid-area: email;
+			justify-self: start;
+			align-self: center;
+		}
+		#subject {
+			grid-area: subj;
+			align-self: end;
+			justify-self: start;
+		}
+		#message {
+			grid-area: message;
+			justify-self: end;
+		}
+		.hireMe {
+			grid-area: hireme;
+			align-self: center;
+			justify-self: center;
+			width: 100px;
+			height: 35px;
+		}
+	}
+}
+.myAddress-form {
+	font-family: "Raleway";
+	> input {
+		border: 1px solid #353541;
+		color: #797979;
+		padding-left: 10px;
+		padding-right: 10px;
+		font-style: italic;
+		font-size: 14pt;
+		line-height: 2;
+		width: 275px;
+	}
+	.hireMe {
+		font-size: 16pt;
+		border-radius: 0;
+	}
+}
+
+// address info 2d grid block
+
+.myAddress-location, .myAddress-Email, .myAddress-phnum {
+	justify-self: center;
+	min-width: 265px;
+	font-size: 22pt;
+	position: relative;
+	> p {
+		font-size: 16px;
+		color: #797979;
+		margin: 20px 0 0;
+	}
+	> .fas {
+		position: absolute;
+		left: -70px;
+		top: 20px;
+		font-size: 40px;
+	}
+	.fa-mobile-alt {
+		left: -60px;
+	}
+}
+
+// footer
+
+.footer .container {
+	min-height: 110px;
+	border-top: 1px solid #e5e5e5;
+	.social-media {
+		margin: 0 auto;
+		max-width: 260px;
+		font-size: 12px;
+		p {
+			font-size: 12px;
+			color: #797979;
+		}
+		a {
+			color: #797979;
+		}
+	}
+}
+
+// grid for footer links just practicing lol
+
+.social-media {
+	align-items: center;
+	min-height: 110px;
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	row-gap: 10px;
+	grid-template-columns: repeat(5, 65px);
+	grid-template-rows: repeat(2, 20px);
+	grid-template-areas: " . vk facebook linkedin . " "p p p p p";
+	.vk {
+		grid-area: vk;
+		justify-self: center;
+	}
+	.facebook {
+		justify-self: center;
+		grid-area: facebook;
+	}
+	.linkedin {
+		justify-self: center;
+		grid-area: linkedin;
+		border-right: none;
+	}
+	p {
+		grid-area: p;
+		text-align: center;
+		border-right: none;
+	}
+	> * {
+		padding-right: 10px;
+		border-right: 1px solid #797979;
+	}
+
+}
+
+// side menu
+
+.sidebar{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 18.5%;
+	z-index: 10;
+	background-color: #353541;
+	display: none;
+	.fa-times{
+		position: absolute;
+		z-index: 15;
+		top: 1.5%;
+		left: 4%;
+		color: $color;
+		cursor: pointer;
+	}
+}
+
+.navMenu {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 220px repeat(7, 60px);
+	justify-items: center;
+	> * {
+
+		width: 100%;
+		height: 100%;
+		border-top: 1px solid white;
+	}
+	> a {
+		text-decoration: none;
+		color: #fff;
+		padding-left: 30px;
+		justify-self: center;
+		align-self: center;
+		align-content: center;
+		padding-top: 15px;
+		transition: 0.5s;
+
+	}
+	> a:hover {
+		background-color: #fff;
+		color: #1d1d24;
+
+	}
+	
+	:last-child {
+		border-bottom: 1px solid white;
+	}
+	:first-child {
+		border-top: none;
+	}
+}
+
+// animations
+
+.social-media a .fab:hover {
+	color: #020283;
+	transition: 0.5s;
+}
+
+input[type='range']::before{
+	content: '';
+	width: 0px;
+	height: 5px;
+	background-color: $color;
+	position: absolute;
+}
+.hello {
+	height: 5px;
+	width: 50%;
+	background-color: $color;
+	bottom: -3px;
+	position: absolute;
+	z-index: 1;
+}
